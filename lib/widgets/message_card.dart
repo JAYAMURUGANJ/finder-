@@ -22,7 +22,7 @@ class Messages extends StatelessWidget {
           .copyWith(left: isUser ? 100 : 10, right: isUser ? 10 : 100),
       decoration: BoxDecoration(
           color: isUser
-              ? const Color.fromARGB(255, 127, 186, 226)
+              ? const Color.fromARGB(255, 99, 179, 233)
               : Colors.grey.shade400,
           borderRadius: BorderRadius.only(
               topLeft: const Radius.circular(10),
@@ -48,7 +48,7 @@ class Messages extends StatelessWidget {
               date,
               textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 12,
                 color: isUser ? Colors.white : Colors.black,
               ),
             ),

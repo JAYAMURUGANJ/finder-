@@ -9,75 +9,74 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(251, 255, 238, 239),
       appBar: appBar,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Center(
-            child: Card(
-              margin: const EdgeInsets.all(20.0),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/image1.png'),
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Center(
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      'Welcome to \n$finder_emoji Gen Lead',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                    SizedBox(height: 20.0),
+                    Text(
+                      "A complete guide...",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 18, color: Colors.black),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Container(
+                width: double.infinity,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   gradient: LinearGradient(
-                    colors: [Colors.lightBlue, Colors.black],
+                    colors: [Color.fromARGB(255, 0, 139, 253), Colors.black],
                     begin: Alignment.topCenter,
-                    end: Alignment.bottomRight,
+                    end: Alignment.bottomCenter,
                   ),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'Welcome to \n$finder_emoji Finder',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 24.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
+                child: OutlinedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const ChatScreen(),
                       ),
-                      SizedBox(height: 20.0),
-                      Text(
-                        "I'm an artificial intelligence chatbot, and my goal is to respond to questions from people.",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      )
-                    ],
+                    );
+                  },
+                  child: const Text(
+                    'Start',
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                 ),
               ),
             ),
-          ),
-          Container(
-            width: 120,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              gradient: LinearGradient(
-                colors: [Colors.lightBlue, Colors.black],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-            child: OutlinedButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => const ChatScreen(),
-                  ),
-                );
-              },
-              child: const Text(
-                'Start',
-                style: TextStyle(color: Colors.white, fontSize: 22),
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

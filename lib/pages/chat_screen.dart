@@ -131,15 +131,6 @@ class _ChatScreenState extends State<ChatScreen> {
                           _isTextFieldEmpty = text.trim().isEmpty;
                         });
                       },
-                      // onTap: () {
-                      //   WidgetsBinding.instance.addPostFrameCallback((_) {
-                      //     _scrollController.animateTo(
-                      //       _scrollController.position.maxScrollExtent - 1,
-                      //       duration: const Duration(milliseconds: 300),
-                      //       curve: Curves.easeOut,
-                      //     );
-                      //   });
-                      // },
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),

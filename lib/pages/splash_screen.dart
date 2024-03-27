@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "$finder_emoji \nFinder",
+              "$finder_emoji \nGen Lead",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 30),
             ),
